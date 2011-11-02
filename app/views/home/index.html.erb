@@ -1,0 +1,31 @@
+<h1>Brighton Ruby User Group</h1>
+<p>
+  We meet on the first Wednesday of every month, 7pm at <a
+    href="http://theskiff.org/">The Skiff</a>.
+</p>
+
+<p>
+  This web site is going to be <strong>AWESOME</strong>.
+</p>
+
+<p>
+  The <a href="https://github.com/camelpunch/brightonruby">source for this
+    Rails app is on github</a>.
+</p>
+
+<% if @comments.any? %>
+  <ol>
+    <%= render @comments %>
+  </ol>
+<% end %>
+
+<%= form_for Comment.new do |form| %>
+  <p>
+    <%= form.label :text %>
+    <%= form.text_area :text %>
+  </p>
+  <p>
+    <%= form.submit "Add comment" %>
+  </p>
+<% end %>
+
