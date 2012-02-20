@@ -20,7 +20,7 @@ end
 
 gem 'jquery-rails'
 
-group :test do
+group :development, :test do
   gem "rspec-rails"
   gem "capybara"
   gem "database_cleaner"
